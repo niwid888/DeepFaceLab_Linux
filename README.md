@@ -23,6 +23,18 @@ Check latest cudnn and cudatoolkit version for your GPU device.
  python -m pip install -r ./DeepFaceLab/requirements-cuda.txt
 ```
 
+you can confirm your gpu is working correctly by running the following code and seeing what messages pop up:
+
+```bash
+python -c "import tensorflow as tf;print(tf.__version__)"
+```
+
+If the scripts can't seem to access the GPU and you're having issues with cuda version mismatches when running `nvidia-smi`, they can sometimes be remedied by simply running
+
+```bash
+conda install tensorflow-gpu==2.4.1
+```
+
 ## 4. Download Pretrain (optional)
 Use script 4.1 from the scripts directory.
  
